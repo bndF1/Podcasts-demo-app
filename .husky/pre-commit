@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+bunx lint-staged --relative
+
+# we can add more commands here, like tests. Skip this for now.
