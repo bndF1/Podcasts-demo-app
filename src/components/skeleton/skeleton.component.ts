@@ -3,7 +3,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 @Component({
   selector: 'app-skeleton',
   standalone: true,
-
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="w-fulld mx-auto animate-pulse p-9">
