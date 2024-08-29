@@ -15,6 +15,6 @@ export class LoadingService {
   }
 
   _isLoading() {
-    return this.isLoading();
+    return this.isLoading;
   }
 }

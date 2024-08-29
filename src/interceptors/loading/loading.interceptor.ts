@@ -10,6 +10,7 @@ export const loadingInterceptor: HttpInterceptorFn = (req, next) => {
 
   return next(req).pipe(
     finalize(() => {
+      console.log('Request completed');
       loadingService.stopLoading(); // Hide loading spinner UI element
     }),
   );

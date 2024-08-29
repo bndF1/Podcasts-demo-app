@@ -1,11 +1,5 @@
 import { CommonModule } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  input,
-  OnInit,
-  output,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { Episode } from '@models';
 import { TuiButton, TuiIcon, TuiSurface, TuiTitle } from '@taiga-ui/core';
 import { TuiAvatar } from '@taiga-ui/kit';
@@ -36,12 +30,6 @@ import { TuiCardLarge, TuiCell } from '@taiga-ui/layout';
     </button>
   `,
 })
-export class EpisodesItemComponent implements OnInit {
+export class EpisodesItemComponent {
   episode = input.required<Episode>();
-  loaded = output<string>();
-
-  ngOnInit(): void {
-    // this.loaded.emit(this.episode().)
-    console.log('not implemented');
-  }
 }

@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { EpisodesService } from '@services';
+import { SkeletonComponent } from '../skeleton/skeleton.component';
 import { EpisodesItemComponent } from './episodes-item/episodes-item.component';
 
 @Component({
   selector: 'app-episodes-container',
   standalone: true,
-  imports: [CommonModule, EpisodesItemComponent],
+  imports: [CommonModule, EpisodesItemComponent, SkeletonComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     @let episodeList = episodes();
@@ -15,9 +16,7 @@ import { EpisodesItemComponent } from './episodes-item/episodes-item.component';
         @defer (on viewport) {
           <app-episodes-item [episode]="episode" />
         } @placeholder {
-          <div>...</div>
-        } @loading {
-          <div>Loading...</div>
+          <app-skeleton />
         }
       }
     }
