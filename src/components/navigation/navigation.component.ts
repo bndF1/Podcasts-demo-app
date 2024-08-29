@@ -11,13 +11,14 @@ import {
 } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { RouterModule } from '@angular/router';
-import { TuiBreakpointService } from '@taiga-ui/core';
+import { LoadingService } from '@services';
+import { TuiBreakpointService, TuiLoader } from '@taiga-ui/core';
 import { SkeletonComponent } from '../skeleton/skeleton.component';
 
 @Component({
   selector: 'app-navigation',
   standalone: true,
-  imports: [CommonModule, RouterModule, SkeletonComponent],
+  imports: [CommonModule, RouterModule, SkeletonComponent, TuiLoader],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div #drawer>
@@ -132,6 +133,9 @@ import { SkeletonComponent } from '../skeleton/skeleton.component';
 
     <div class="p-4 sm:ml-64">
       <div class="p-4">
+        @if (isLoading()) {
+          <tui-loader />
+        }
         <router-outlet />
       </div>
     </div>
@@ -143,6 +147,8 @@ export class NavigationComponent {
   readonly isMobile = computed(() => this.breakpoint$() === 'mobile');
 
   expanded = signal(!this.isMobile());
+
+  isLoading = inject(LoadingService)._isLoading();
 
   @HostListener('document:click', ['$event'])
   @HostListener('document:touchend', ['$event'])
