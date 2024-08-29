@@ -21,7 +21,11 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@components/navigation": ["src/components/navigation/index.ts"]
+      "@adapters": ["src/adapters/index.ts"],
+      "@components/episodes": ["src/components/episodes/index.ts"],
+      "@components/navigation": ["src/components/navigation/index.ts"],
+      "@models": ["src/models/index.ts"],
+      "@services": ["src/services/index.ts"]
     }
   },
   "files": [],

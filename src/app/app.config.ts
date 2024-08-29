@@ -1,3 +1,4 @@
+import { provideHttpClient, withFetch } from '@angular/common/http';
 import {
   ApplicationConfig,
   provideExperimentalZonelessChangeDetection,
@@ -14,5 +15,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(appRoutes, withComponentInputBinding()),
     NG_EVENT_PLUGINS,
     provideExperimentalZonelessChangeDetection(),
+    provideHttpClient(withFetch()),
   ],
 };
