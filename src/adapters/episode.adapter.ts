@@ -1,4 +1,4 @@
-import { Chapter, Episode } from '@models';
+import { Chapter, Episode } from 'src/app/models';
 
 export const EpisodeAdapter = (chapters: Chapter[]): Episode[] =>
   chapters.map((chapter) => ({

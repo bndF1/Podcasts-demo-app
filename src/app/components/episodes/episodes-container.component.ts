@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { EpisodesService } from '@services';
+import { EpisodesService } from 'src/app/services';
 import { SkeletonComponent } from '../skeleton/skeleton.component';
 import { EpisodesItemComponent } from './episodes-item/episodes-item.component';
 

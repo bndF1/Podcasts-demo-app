@@ -22,10 +22,10 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "@adapters": ["src/adapters/index.ts"],
-      "@components/episodes": ["src/components/episodes/index.ts"],
-      "@components/navigation": ["src/components/navigation/index.ts"],
-      "@models": ["src/models/index.ts"],
-      "@services": ["src/services/index.ts"]
+      "@components/episodes": ["src/app/components/episodes/index.ts"],
+      "@components/navigation": ["src/app/components/navigation/index.ts"],
+      "@models": ["src/app/models/index.ts"],
+      "@services": ["src/app/services/index.ts"]
     }
   },
   "files": [],

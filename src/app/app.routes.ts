@@ -3,7 +3,7 @@ import { Route } from '@angular/router';
 const EPISODES_ROUTE: Route = {
   path: 'episodes',
   loadComponent: async () =>
-    (await import('@components/episodes')).EpisodesContainerComponent,
+    (await import('src/app/components/episodes')).EpisodesContainerComponent,
 };
 
 export const appRoutes: Route[] = [
@@ -15,7 +15,7 @@ export const appRoutes: Route[] = [
   {
     path: 'main',
     loadComponent: async () =>
-      (await import('@components/navigation')).NavigationComponent,
+      (await import('src/app/components/navigation')).NavigationComponent,
     children: [EPISODES_ROUTE],
   },
 ];
