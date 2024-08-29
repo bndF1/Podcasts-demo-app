@@ -1,4 +1,8 @@
-import { provideHttpClient, withFetch } from '@angular/common/http';
+import {
+  provideHttpClient,
+  withFetch,
+  withInterceptors,
+} from '@angular/common/http';
 import {
   ApplicationConfig,
   provideExperimentalZonelessChangeDetection,
@@ -6,6 +10,7 @@ import {
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
 import { NG_EVENT_PLUGINS } from '@taiga-ui/event-plugins';
+import { loadingInterceptor } from 'src/interceptors/loading/loading.interceptor';
 import { appRoutes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -15,6 +20,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(appRoutes, withComponentInputBinding()),
     NG_EVENT_PLUGINS,
     provideExperimentalZonelessChangeDetection(),
-    provideHttpClient(withFetch()),
+    provideHttpClient(withFetch(), withInterceptors([loadingInterceptor])),
   ],
 };

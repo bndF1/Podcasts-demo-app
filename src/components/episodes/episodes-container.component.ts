@@ -15,6 +15,8 @@ import { EpisodesItemComponent } from './episodes-item/episodes-item.component';
         @defer (on viewport) {
           <app-episodes-item [episode]="episode" />
         } @placeholder {
+          <div>...</div>
+        } @loading {
           <div>Loading...</div>
         }
       }
