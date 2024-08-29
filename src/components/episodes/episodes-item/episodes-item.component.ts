@@ -21,7 +21,7 @@ import { TuiCardLarge, TuiCell } from '@taiga-ui/layout';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     @let episodeInfo = episode();
-    <button tuiCardLarge tuiCell tuiSurface="elevated" class="mb-4">
+    <button tuiCardLarge tuiCell tuiSurface="elevated" class="flex w-full mb-4">
       <tui-avatar appearance="primary" [src]="episodeInfo.image" />
       <div tuiTitle>
         {{ episodeInfo.title }}

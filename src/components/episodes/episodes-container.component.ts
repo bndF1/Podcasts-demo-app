@@ -17,6 +17,8 @@ import { EpisodesItemComponent } from './episodes-item/episodes-item.component';
           <app-episodes-item [episode]="episode" />
         } @placeholder {
           <app-skeleton />
+        } @loading {
+          <app-skeleton />
         }
       }
     }
