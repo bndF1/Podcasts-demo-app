@@ -18,7 +18,7 @@ export class ApiService {
   get<T>(
     url: string,
     params: HttpParams = new HttpParams(),
-    context?: HttpContext
+    context?: HttpContext,
   ): Observable<T> {
     return this.http.get<T>(`${this.path}${url}`, {
       params: params,
@@ -31,7 +31,7 @@ export class ApiService {
     data?: D,
     params: HttpParams = new HttpParams(),
     headers?: HttpHeaders,
-    context?: HttpContext
+    context?: HttpContext,
   ): Observable<T> {
     return this.http.post<T>(`${this.path}${url}`, data, {
       params: params,

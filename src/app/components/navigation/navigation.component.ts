@@ -11,8 +11,8 @@ import {
 } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { RouterModule } from '@angular/router';
-import { LoadingService } from '@services';
 import { TuiBreakpointService, TuiLoader } from '@taiga-ui/core';
+import { LoadingService } from 'src/app/services';
 import { SkeletonComponent } from '../skeleton/skeleton.component';
 
 @Component({
