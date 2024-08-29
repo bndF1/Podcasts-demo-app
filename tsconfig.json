@@ -13,14 +13,20 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {},
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@adapters": ["src/adapters/index.ts"],
+      "@components/episodes": ["src/components/episodes/index.ts"],
+      "@components/navigation": ["src/components/navigation/index.ts"],
+      "@models": ["src/models/index.ts"],
+      "@services": ["src/services/index.ts"]
+    }
   },
   "files": [],
   "include": [],
