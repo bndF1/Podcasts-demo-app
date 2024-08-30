@@ -71,5 +71,8 @@
       "style": "scss"
     }
   },
-  "defaultProject": "demos"
+  "defaultProject": "demos",
+  "release": {
+    "projects": ["demos"]
+  }
 }
