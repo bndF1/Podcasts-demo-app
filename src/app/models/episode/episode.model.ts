@@ -7,4 +7,5 @@ export interface Episode {
   mp3: string;
   image: string;
   episodeNumber: number;
+  category: string;
 }

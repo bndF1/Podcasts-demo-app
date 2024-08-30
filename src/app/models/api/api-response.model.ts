@@ -24,6 +24,7 @@ export interface Chapter {
   episode_number: number;
   listeners: number;
   rating: number;
+  category: string;
 }
 
 export interface ChapterComment {

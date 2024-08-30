@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { TuiButton, TuiIcon, TuiSurface, TuiTitle } from '@taiga-ui/core';
-import { TuiAvatar } from '@taiga-ui/kit';
+import { TuiAvatar, TuiChip } from '@taiga-ui/kit';
 import { TuiCardLarge, TuiCell } from '@taiga-ui/layout';
 import { Episode } from 'src/app/models';
 
@@ -17,6 +17,7 @@ import { Episode } from 'src/app/models';
     TuiSurface,
     TuiCell,
     TuiTitle,
+    TuiChip,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
@@ -27,6 +28,10 @@ import { Episode } from 'src/app/models';
         {{ episodeInfo.title }}
         <div tuiSubtitle>{{ episodeInfo.description }}</div>
       </div>
+
+      <tui-chip>{{ episodeInfo.category }}</tui-chip>
+      <tui-icon icon="@tui.circle-play" />
+      <tui-icon icon="@tui.list-plus" />
     </button>
   `,
 })
