@@ -96,14 +96,12 @@ import { SkeletonComponent } from '../skeleton/skeleton.component';
       }
     </div>
 
-    <div class="p-4 sm:ml-64">
-      <div class="p-4 gap-1 ">
-        <app-search />
-        @if (isLoading()) {
-          <tui-loader />
-        }
-        <router-outlet />
-      </div>
+    <div class="flex flex-col p-4 sm:ml-64 gap-4">
+      <app-search />
+      @if (isLoading()) {
+        <tui-loader />
+      }
+      <router-outlet />
     </div>
   `,
 })
