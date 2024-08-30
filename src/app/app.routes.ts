@@ -6,6 +6,12 @@ const EPISODES_ROUTE: Route = {
     (await import('src/app/components/episodes')).EpisodesContainerComponent,
 };
 
+const PODCASTS: Route = {
+  path: 'podcasts',
+  loadComponent: async () =>
+    (await import('src/app/components/podcasts')).PodcastsContainerComponent,
+};
+
 export const appRoutes: Route[] = [
   {
     path: '',
@@ -16,6 +22,20 @@ export const appRoutes: Route[] = [
     path: 'main',
     loadComponent: async () =>
       (await import('src/app/components/navigation')).NavigationComponent,
-    children: [EPISODES_ROUTE],
+    children: [PODCASTS, EPISODES_ROUTE],
+  },
+  {
+    path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full',
+  },
+  {
+    path: 'main',
+    redirectTo: 'podcasts',
+    pathMatch: 'full',
+  },
+  {
+    path: 'dashboard',
+    redirectTo: 'main/podcasts',
   },
 ];

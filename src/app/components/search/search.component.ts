@@ -44,35 +44,6 @@ import { map } from 'rxjs';
           </tui-textfield>
           <button size="s" tuiButton>Search</button>
         </fieldset>
-
-        <!-- <fieldset>
-          <tui-segmented>
-            <label *ngFor="let segment of segments">
-              <input
-                formControlName="segmented"
-                type="radio"
-                [value]="segment"
-              />
-              {{ segment || 'All' }}
-            </label>
-          </tui-segmented>
-          <tui-filter formControlName="filter" size="s" [items]="filters" />
-          Results: 999
-          <hr />
-          
-          <hr />
-          <button
-            appearance="flat"
-            iconStart="@tui.rotate-cw"
-            size="xs"
-            tuiButton
-            type="reset"
-            [disabled]="!count()"
-          >
-            Clear {{ count() ? '(' + count() + ')' : '' }}
-          </button>
-         
-        </fieldset> -->
       </form>
     </search>
   `,
