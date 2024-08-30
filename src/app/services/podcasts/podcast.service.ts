@@ -1,6 +1,23 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { Broadcast } from '@models';
+import { map } from 'rxjs';
+import { PodcastAdapter } from 'src/adapters/podcast.adapter';
+import { ApiService } from '../api.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class PodcastService {}
+export class PodcastService {
+  readonly PATH = '/podcasts';
+
+  apiService = inject(ApiService);
+
+  getAllPodcasts() {
+    return toSignal(
+      this.apiService
+        .get<Broadcast[]>(`${this.PATH}`)
+        .pipe(map(PodcastAdapter)),
+    );
+  }
+}
