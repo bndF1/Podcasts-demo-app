@@ -11,7 +11,6 @@ import {
 } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { RouterModule } from '@angular/router';
-import { FastSvgComponent } from '@push-based/ngx-fast-svg';
 import { TuiBreakpointService, TuiIcon, TuiLoader } from '@taiga-ui/core';
 import { LoadingService } from 'src/app/services';
 import { SearchComponent } from '../search/search.component';
@@ -26,7 +25,6 @@ import { SkeletonComponent } from '../skeleton/skeleton.component';
     SkeletonComponent,
     TuiLoader,
     SearchComponent,
-    FastSvgComponent,
     TuiIcon,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
