@@ -20,22 +20,13 @@ export const appRoutes: Route[] = [
   },
   {
     path: 'main',
-    loadComponent: async () =>
-      (await import('src/app/components/navigation')).NavigationComponent,
-    children: [PODCASTS, EPISODES_ROUTE],
-  },
-  {
-    path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'main/podcasts',
     pathMatch: 'full',
   },
   {
     path: 'main',
-    redirectTo: 'podcasts',
-    pathMatch: 'full',
-  },
-  {
-    path: 'dashboard',
-    redirectTo: 'main/podcasts',
+    loadComponent: async () =>
+      (await import('src/app/components/navigation')).NavigationComponent,
+    children: [PODCASTS, EPISODES_ROUTE],
   },
 ];
