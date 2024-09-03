@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { EpisodesService } from 'src/app/services';
-import { SkeletonComponent } from '../skeleton/skeleton.component';
+import { SkeletonComponent } from '@components/shared';
+import { EpisodesService } from '@services';
 import { EpisodesItemComponent } from './episodes-item/episodes-item.component';
 
 @Component({

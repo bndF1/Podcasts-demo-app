@@ -7,7 +7,6 @@ import { Podcast } from '@models';
   standalone: true,
   imports: [NgOptimizedImage],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styles: ``,
   template: `
     @if (podcast(); as podcast) {
       <div
@@ -41,5 +40,5 @@ import { Podcast } from '@models';
   `,
 })
 export class PodcastItemComponent {
-  podcast = input.required<Partial<Podcast>>();
+  podcast = input.required<Podcast>();
 }
