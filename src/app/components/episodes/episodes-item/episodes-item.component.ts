@@ -13,10 +13,20 @@ import { Episode } from '@models';
         <h2 class="card-title">{{ episodeInfo.title }}</h2>
         <p>{{ episodeInfo.description }}</p>
         <div class="card-actions justify-start">
-          <div class="badge badge-accent p-4 mt-4">
-            {{ episodeInfo.category }}
-          </div>
-          <button class="btn btn-circle"></button>
+          <span
+            class="bg-yellow-100 text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300"
+          >
+            {{ episodeInfo.category }}</span
+          >
+          <span
+            class="hover:cursor-pointer material-symbols-outlined"
+            (click)="onClick()"
+          >
+            play_circle
+          </span>
+          <span class="hover:cursor-pointer material-symbols-outlined">
+            add_to_queue
+          </span>
         </div>
       </div>
     </div>
@@ -24,4 +34,8 @@ import { Episode } from '@models';
 })
 export class EpisodesItemComponent {
   episode = input.required<Episode>();
+
+  onClick() {
+    console.log('Play episode', this.episode().title);
+  }
 }
