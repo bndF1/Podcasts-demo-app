@@ -68,7 +68,10 @@
       "unitTestRunner": "jest"
     },
     "@nx/angular:component": {
-      "style": "scss"
+      "style": "scss",
+      "changeDetection": "OnPush",
+      "inlineStyle": true,
+      "inlineTemplate": true
     }
   },
   "defaultProject": "demos",

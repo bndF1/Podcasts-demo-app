@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
-import { EpisodeAdapter } from 'src/adapters/episode.adapter';
+import { EpisodeAdapter } from 'src/app/adapters/episode.adapter';
 import { Chapter } from 'src/app/models';
 import { ApiService } from '../api.service';
 

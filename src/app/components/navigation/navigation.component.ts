@@ -1,8 +1,8 @@
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
-  computed,
   ElementRef,
   HostListener,
   inject,
@@ -11,10 +11,13 @@ import {
 } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { RouterModule } from '@angular/router';
-import { TuiBreakpointService, TuiIcon, TuiLoader } from '@taiga-ui/core';
-import { LoadingService } from 'src/app/services';
-import { SearchComponent } from '../search/search.component';
-import { SkeletonComponent } from '../skeleton/skeleton.component';
+import {
+  LoadingComponent,
+  SearchComponent,
+  SkeletonComponent,
+} from '@components/shared';
+import { LoadingService } from '@services';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-navigation',
@@ -23,9 +26,8 @@ import { SkeletonComponent } from '../skeleton/skeleton.component';
     CommonModule,
     RouterModule,
     SkeletonComponent,
-    TuiLoader,
     SearchComponent,
-    TuiIcon,
+    LoadingComponent,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
@@ -39,7 +41,8 @@ import { SkeletonComponent } from '../skeleton/skeleton.component';
         class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
       >
         <span class="sr-only">Open sidebar</span>
-        <tui-icon icon="@tui.menu" />
+
+        <span class="material-symbols-outlined"> menu </span>
       </button>
 
       @if (expanded()) {
@@ -61,7 +64,7 @@ import { SkeletonComponent } from '../skeleton/skeleton.component';
                   routerLink="./podcasts"
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 >
-                  <tui-icon icon="@tui.podcast" />
+                  <span class="material-symbols-outlined"> podcasts </span>
                   <span class="ms-3">All Podcasts</span>
                 </a>
               </li>
@@ -70,7 +73,7 @@ import { SkeletonComponent } from '../skeleton/skeleton.component';
                   [routerLink]="'./episodes'"
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 >
-                  <tui-icon icon="@tui.rss" />
+                  <span class="material-symbols-outlined"> rss_feed </span>
                   <span class="flex-1 ms-3 whitespace-nowrap"
                     >Subscriptions</span
                   >
@@ -80,7 +83,7 @@ import { SkeletonComponent } from '../skeleton/skeleton.component';
                 <a
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 >
-                  <tui-icon icon="@tui.list-music" />
+                  <span class="material-symbols-outlined"> queue_music </span>
                   <span class="flex-1 ms-3 whitespace-nowrap">Queue</span>
                   <span
                     class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300"
@@ -96,8 +99,9 @@ import { SkeletonComponent } from '../skeleton/skeleton.component';
 
     <div class="flex flex-col p-4 sm:ml-64 gap-4">
       <app-search />
+
       @if (isLoading()) {
-        <tui-loader />
+        <app-loading />
       }
       <router-outlet />
     </div>
@@ -105,8 +109,13 @@ import { SkeletonComponent } from '../skeleton/skeleton.component';
 })
 export class NavigationComponent {
   readonly drawer = viewChild<ElementRef>('drawer');
-  readonly breakpoint$ = toSignal(inject(TuiBreakpointService));
-  readonly isMobile = computed(() => this.breakpoint$() === 'mobile');
+
+  readonly breakpointObserver = inject(BreakpointObserver);
+  readonly isMobile = toSignal(
+    this.breakpointObserver
+      .observe([Breakpoints.Handset, Breakpoints.TabletPortrait])
+      .pipe(map((result) => result.matches)),
+  );
 
   expanded = signal(!this.isMobile());
 

@@ -13,7 +13,6 @@ import {
   withComponentInputBinding,
   withViewTransitions,
 } from '@angular/router';
-import { NG_EVENT_PLUGINS } from '@taiga-ui/event-plugins';
 import { loadingInterceptor } from 'src/app/interceptors/loading/loading.interceptor';
 import { appRoutes } from './app.routes';
 
@@ -26,7 +25,6 @@ export const appConfig: ApplicationConfig = {
       withComponentInputBinding(),
       withViewTransitions(),
     ),
-    NG_EVENT_PLUGINS,
     provideExperimentalZonelessChangeDetection(),
     provideHttpClient(withFetch(), withInterceptors([loadingInterceptor])),
   ],

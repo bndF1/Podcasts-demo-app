@@ -21,12 +21,13 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@adapters": ["src/adapters/index.ts"],
+      "@adapters": ["src/app/adapters/index.ts"],
       "@components/episodes": ["src/app/components/episodes/index.ts"],
       "@components/navigation": ["src/app/components/navigation/index.ts"],
-      "@components/search": ["src/app/components/search/index.ts"],
+      "@components/shared": ["src/app/components/shared/index.ts"],
       "@models": ["src/app/models/index.ts"],
-      "@services": ["src/app/services/index.ts"]
+      "@services": ["src/app/services/index.ts"],
+      "@utils": ["src/app/utils/index.ts"]
     }
   },
   "files": [],
