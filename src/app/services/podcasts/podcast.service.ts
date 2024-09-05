@@ -11,14 +11,23 @@ import { ApiService } from '../api.service';
 })
 export class PodcastService {
   readonly PATH = '/podcasts';
-
-  apiService = inject(ApiService);
+  private readonly apiService = inject(ApiService);
 
   getAllPodcasts() {
+    return toSignal(this.getAll());
+  }
+
+  getMyPodcasts() {
     return toSignal(
       this.apiService
-        .get<Broadcast[]>(`${this.PATH}`)
+        .get<Broadcast[]>(`${this.PATH}/myPodcasts`)
         .pipe(map(PodcastAdapter)),
     );
+  }
+
+  getAll() {
+    return this.apiService
+      .get<Broadcast[]>(`${this.PATH}`)
+      .pipe(map(PodcastAdapter));
   }
 }
