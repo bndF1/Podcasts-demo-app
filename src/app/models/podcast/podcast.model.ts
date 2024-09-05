@@ -9,3 +9,5 @@ export interface Podcast {
   subscribers: number;
   rating: number;
 }
+
+export type SubscribedPodcast = Podcast & { subscribed: boolean };

@@ -1,15 +1,17 @@
+import { JsonPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkeletonComponent } from '@components/shared';
-import { PodcastService } from '@services';
+import { PodcastStore } from '@store';
 import { PodcastItemComponent } from './podcast-item/podcast-item.component';
 
 @Component({
   selector: 'app-podcasts-container',
   standalone: true,
-  imports: [PodcastItemComponent, SkeletonComponent],
+  imports: [PodcastItemComponent, SkeletonComponent, JsonPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    @let podcasts = allPodcasts();
+    @let podcasts = store.podcasts();
+    <!-- YEP::  {{podcasts | json }} -->
     @defer (when podcasts) {
       <h2
         class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white"
@@ -31,5 +33,5 @@ import { PodcastItemComponent } from './podcast-item/podcast-item.component';
   `,
 })
 export class PodcastsContainerComponent {
-  allPodcasts = inject(PodcastService).getAllPodcasts();
+  store = inject(PodcastStore);
 }
