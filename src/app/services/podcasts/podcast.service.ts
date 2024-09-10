@@ -18,11 +18,9 @@ export class PodcastService {
   }
 
   getMyPodcasts() {
-    return toSignal(
-      this.apiService
-        .get<Broadcast[]>(`${this.PATH}/myPodcasts`)
-        .pipe(map(PodcastAdapter)),
-    );
+    return this.apiService
+      .get<Broadcast[]>(`/myPodcasts`)
+      .pipe(map(PodcastAdapter));
   }
 
   getAll() {
