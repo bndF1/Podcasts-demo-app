@@ -34,16 +34,6 @@ export const PodcastStore = signalStore(
   { providedIn: 'root' },
   withState(() => inject(STORE_STATE)),
   withEntities<Podcast>(),
-  withMethods((store, podcastService = inject(PodcastService)) => ({
-    async getAllPodcasts() {
-      patchState(store, { loading: true });
-      const allPodcasts = await lastValueFrom(podcastService.getAll());
-      patchState(store, { podcasts: allPodcasts, loading: false });
-    },
-    getMyPodcasts() {
-      return podcastService.getMyPodcasts();
-    },
-  })),
   withComputed(({ podcasts, myPodcasts, filter }) => ({
     subscribedPodcasts: computed(() =>
       podcasts().filter((podcast) =>
@@ -55,9 +45,23 @@ export const PodcastStore = signalStore(
       return podcasts().sort((a, b) => (a.rating - b.rating) * direction);
     }),
   })),
+  withMethods((store, podcastService = inject(PodcastService)) => ({
+    async getAllPodcasts() {
+      patchState(store, { loading: true });
+      const allPodcasts = await lastValueFrom(podcastService.getAll());
+      patchState(store, { podcasts: allPodcasts, loading: false });
+    },
+    async getMyPodcasts() {
+      patchState(store, { loading: true });
+      const pods = await lastValueFrom(podcastService.getMyPodcasts());
+      patchState(store, { myPodcasts: pods, loading: false });
+    },
+  })),
+
   withHooks({
     async onInit(store) {
       store.getAllPodcasts();
+      store.getMyPodcasts();
     },
   }),
 );

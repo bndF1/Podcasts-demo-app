@@ -11,7 +11,6 @@ import { PodcastItemComponent } from './podcast-item/podcast-item.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     @let podcasts = store.podcasts();
-    <!-- YEP::  {{podcasts | json }} -->
     @defer (when podcasts) {
       <h2
         class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white"
