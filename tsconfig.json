@@ -27,8 +27,8 @@
       "@components/shared": ["src/app/components/shared/index.ts"],
       "@models": ["src/app/models/index.ts"],
       "@services": ["src/app/services/index.ts"],
-      "@utils": ["src/app/utils/index.ts"],
       "@store": ["src/app/store/index.ts"],
+      "@utils": ["src/app/utils/index.ts"]
     }
   },
   "files": [],
