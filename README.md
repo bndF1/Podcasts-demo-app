@@ -1,101 +1,122 @@
-# Demos
+# 🎙️ Podcasts demo app
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+The goal of this project is to show some of the new features that Angular is introducing.
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
+Starting version 16, Angular has been making some changes that will become crucial for the future of the framework.
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/angular-standalone-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+Starting from standalone components, the new control flow, new way to inject, etc to the new SSR and the future hydration and partial hydration that the core team is implementing now.
 
-## Run tasks
+Signals from my point of view are the key point of the evolution, thanks to them we will be able to run away from zone.js and improve the performance a lot.
 
-To run the dev server for your app, use:
+## 🚀 Project Overview
 
-```sh
-npx nx serve demos
-```
+This project is a demonstration of modern Angular features and best practices, showcasing the evolution of the framework and its ecosystem. It's built using Angular 18.2.0 and leverages the power of Nx for monorepo management.
 
-To create a production bundle:
+The goal of this project is to illustrate some of the new features that Angular is introducing, particularly focusing on changes that have been implemented since version 16. These changes are crucial for the future of the framework and include:
 
-```sh
-npx nx build demos
-```
+- Standalone components
+- New control flow syntax
+- New dependency injection techniques
+- Server-Side Rendering (SSR) improvements
+- Future hydration and partial hydration capabilities
 
-To see all available targets to run for a project, run:
+A key focus of this demo is the implementation of Signals, which are viewed as a pivotal evolution in Angular's reactivity model. Signals are expected to significantly improve performance by enabling Angular to move away from Zone.js for change detection.
 
-```sh
-npx nx show project demos
-```
-        
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
+## 🏗️ Architecture and Key Features
 
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+### 🅰️ Angular 18.2.0
 
-## Add new projects
+This project uses the latest stable version of Angular, taking advantage of its newest features and performance improvements.
 
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
+### 📦 Nx Monorepo
 
-Use the plugin's generator to create new projects.
+The project is set up as an Nx monorepo, which provides:
 
-To generate a new application, use:
+- Efficient build system
+- Powerful code generation tools
+- Smart, fast testing capabilities
 
-```sh
-npx nx g @nx/angular:app demo
-```
+### 🧩 Standalone Components
 
-To generate a new library, use:
+All components in this project are standalone, showcasing Angular's move towards a more modular and tree-shakable architecture.
 
-```sh
-npx nx g @nx/angular:lib mylib
-```
+### 📡 Signals
 
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
+The project extensively uses Angular's new Signals API for state management and reactivity. Signals provide a more efficient and predictable way to handle reactive state in Angular applications.
 
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+### 🏪 NgRx Signal Store
 
-## Set up CI!
+NgRx SignalStore is a fully-featured state management solution that offers a robust way to manage application state. With its native support for Signals, it provides the ability to define stores in a clear and declarative manner. The simplicity and flexibility of SignalStore, coupled with its opinionated and extensible design, establish it as a versatile solution for effective state management in Angular.
 
-### Step 1
+### 🔄 RxJS Integration
 
-To connect to Nx Cloud, run the following command:
+The project demonstrates the integration of RxJS with Signals, using the `toSignal` function to bridge the gap between Observables and Signals.
 
-```sh
-npx nx connect
-```
+### 🚀 Lazy Loading
 
-Connecting to Nx Cloud ensures a [fast and scalable CI](https://nx.dev/ci/intro/why-nx-cloud?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) pipeline. It includes features such as:
+Routes are lazy-loaded to improve initial load time and overall application performance.
 
-- [Remote caching](https://nx.dev/ci/features/remote-cache?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task distribution across multiple machines](https://nx.dev/ci/features/distribute-task-execution?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Automated e2e test splitting](https://nx.dev/ci/features/split-e2e-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task flakiness detection and rerunning](https://nx.dev/ci/features/flaky-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+### 🖥️ Server-Side Rendering (SSR)
 
-### Step 2
+While not fully implemented in this demo, the project is structured to support SSR, which is a key feature for improving initial page load times and SEO.
 
-Use the following command to configure a CI workflow for your workspace:
+### 🎨 Tailwind CSS and DaisyUI
 
-```sh
-npx nx g ci-workflow
-```
+The project uses Tailwind CSS for styling, with DaisyUI as a component library, providing a modern and responsive design system.
 
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+## 📁 Project Structure
 
-## Install Nx Console
+- `src/app/components`: Contains all the Angular components, organized by feature
+- `src/app/services`: Houses services for data fetching and business logic
+- `src/app/models`: Defines TypeScript interfaces for data models
+- `src/app/adapters`: Contains adapter functions for transforming API responses
+- `src/app/store`: Implements the custom signal-based store
+- `src/app/utils`: Utility functions and constants
+- `src/environments`: Environment-specific configuration files
 
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
+## 🔑 Key Components
 
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+- `NavigationComponent`: Handles the main navigation and layout of the application
+- `PodcastsContainerComponent`: Manages the display of all podcasts
+- `EpisodesContainerComponent`: Manages the display of podcast episodes
 
-## Useful links
+## 🛠️ Services
 
-Learn more:
+- `ApiService`: Handles HTTP requests to the backend API
+- `PodcastService`: Manages podcast-related data and operations
+- `EpisodesService`: Manages episode-related data and operations
+- `LoadingService`: Manages loading state across the application
 
-- [Learn more about this workspace setup](https://nx.dev/getting-started/tutorials/angular-standalone-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+## 🗃️ State Management
 
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+The project uses NgRx SignalStore for managing application state. This demonstrates how Signals can be used to create a robust state management solution with the power and flexibility of NgRx.
+
+## 🧪 Testing
+
+The project is set up with Jest for unit testing and Playwright for end-to-end testing, ensuring code quality and reliability.
+
+## 🚀 Getting Started
+
+1. Clone the repository
+2. Install dependencies: `bun install`
+3. Start the development server: `bun start`
+
+## 🏗️ Building for Production
+
+Run `nx build` or `bun run build` to build the project for production. The build artifacts will be stored in the `dist/` directory.
+
+## 🌐 Deployment
+
+The project is currently deployed and can be previewed at:
+
+[https://demos-sepia.vercel.app](https://demos-sepia.vercel.app)
+
+This deployment is hosted on Vercel and represents the latest version of the application. Feel free to visit the link to see the project in action.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read the contributing guidelines before submitting pull requests.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
