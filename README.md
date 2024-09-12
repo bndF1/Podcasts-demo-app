@@ -22,6 +22,16 @@ The goal of this project is to illustrate some of the new features that Angular 
 
 A key focus of this demo is the implementation of Signals, which are viewed as a pivotal evolution in Angular's reactivity model. Signals are expected to significantly improve performance by enabling Angular to move away from Zone.js for change detection.
 
+## 📚 Learning Articles
+
+In the `articles` folder at the root of the project, you'll find a collection of short, insightful articles. These pieces aim to demonstrate powerful, future-oriented features of Angular, as well as some lesser-known aspects that can significantly improve development efficiency.
+
+Each article focuses on a specific topic, providing practical examples and explanations of concepts that I believe will make Angular development easier and more effective.
+
+Topics covered include:
+
+- [New in Angular: Bridging RxJS and Signals with `toSignal`! 🚀](https://github.com/bndF1/Podcasts-demo-app/blob/main/articles/to-signal.md)
+
 ## 🏗️ Architecture and Key Features
 
 ### 🅰️ Angular 18.2.0
