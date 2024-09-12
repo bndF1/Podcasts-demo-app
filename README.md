@@ -123,7 +123,7 @@ The project is currently deployed and can be previewed at:
 
 This deployment is hosted on Vercel and represents the latest version of the application. Feel free to visit the link to see the project in action.
 
-Note: The instance will spin down with inactivity, which can delay requests by 50 seconds or more.
+`Note :: The instance will spin down with inactivity, which can delay requests by 50 seconds or more.`
 
 ## 🤝 Contributing
 
