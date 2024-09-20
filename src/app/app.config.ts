@@ -19,7 +19,6 @@ import { appRoutes } from './app.routes';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideAnimations(),
-    // provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(
       appRoutes,
       withComponentInputBinding(),
