@@ -1,4 +1,3 @@
-import { JsonPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkeletonComponent } from '@components/shared';
 import { PodcastStore } from '@store';
