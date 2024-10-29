@@ -1,4 +1,13 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  output,
+  viewChild,
+} from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { search } from '@utils';
+import { BehaviorSubject, of, tap } from 'rxjs';
 
 @Component({
   selector: 'app-search',
@@ -6,7 +15,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <label class="input input-bordered flex items-center gap-2">
-      <input type="text" class="grow" placeholder="Search" />
+      <input
+        #search
+        type="text"
+        class="grow"
+        placeholder="Search"
+        (keyup)="updateSearch()"
+      />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 16 16"
@@ -22,4 +37,20 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     </label>
   `,
 })
-export class SearchComponent {}
+export class SearchComponent {
+  private readonly searchInput = viewChild<ElementRef>('search');
+  private searchText = new BehaviorSubject<string>('');
+
+  value = output<string>();
+
+  readonly searchTerm = toSignal(
+    this.searchText.pipe(
+      search((text) => of(text)),
+      tap((text) => this.value.emit(text)),
+    ),
+  );
+
+  updateSearch() {
+    this.searchText.next(this.searchInput()?.nativeElement.value);
+  }
+}

@@ -10,7 +10,9 @@ import {
 } from '@ngrx/signals';
 import { withEntities } from '@ngrx/signals/entities';
 import { PodcastService } from '@services';
-import { lastValueFrom } from 'rxjs';
+import { search } from '@utils';
+import { lastValueFrom, of, pipe } from 'rxjs';
+import { rxMethod } from '@ngrx/signals/rxjs-interop';
 
 type PodcastStoreState = {
   podcasts: Podcast[];

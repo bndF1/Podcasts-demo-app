@@ -98,7 +98,7 @@ import { map } from 'rxjs';
     </div>
 
     <div class="flex flex-col p-4 sm:ml-64 gap-4">
-      <app-search />
+      <app-search (value)="search($event)" />
 
       @if (isLoading()) {
         <app-loading />
@@ -132,5 +132,9 @@ export class NavigationComponent {
     ) {
       this.expanded.set(false);
     }
+  }
+
+  search(searchTerm: string) {
+    console.log(searchTerm);
   }
 }
