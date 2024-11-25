@@ -17,7 +17,7 @@ One of the most interesting aspects was how Angular's new Signals-based reactivi
 
 To help visualize the concepts Fabian explained, here's a flowchart showing how the different pieces interact:
 
-![Flowchart](./flowchart.png)
+![Flowchart](./assets/flowchart.png)
 
 The diagram illustrates the key concepts Fabian discussed:
 
