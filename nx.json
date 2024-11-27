@@ -77,5 +77,6 @@
   "defaultProject": "demos",
   "release": {
     "projects": ["demos"]
-  }
+  },
+  "useLegacyCache": true
 }
