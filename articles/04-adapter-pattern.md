@@ -81,4 +81,4 @@ The Adapter pattern is a powerful tool for managing the complexities of data tra
 
 As you build your next Angular masterpiece, consider how the Adapter pattern can elevate your data management game!
 
-🤔 Have you used the Adapter pattern in your Angular projects? What challenges did it help you overcome? Let's discuss in the comments!
+🤔 Have you used the Adapter pattern in your Angular projects? What challenges did it help you overcome? Let's discuss in the comments!.
