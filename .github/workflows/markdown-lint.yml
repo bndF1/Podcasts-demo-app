@@ -1,0 +1,42 @@
+  name: markdown-lint
+
+  on:
+    push:
+      branches:
+        - "**"
+    pull_request:
+      paths:
+        - "**/*.md"
+
+  jobs:
+    markdown-lint:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+
+        - name: Install markdownlint
+          run: npm install -g markdownlint-cli@0.41.0
+
+        - name: Run markdownlint
+          env:
+            CONFIG: |
+              {
+                "comment": "Default rules",
+                "default": true,
+                "whitespace": true,
+                "line_length": false,
+                "ul-start-left": true,
+                "ul-indent": true,
+                "no-inline-html": true,
+                "no-bare-urls": true,
+                "fenced-code-language": true,
+                "first-line-h1": true,
+                "no-duplicate-header": true,
+                "no-emphasis-as-header": true,
+                "single-h1": true
+              }
+          run: |
+            CONFIG_FILE="$(mktemp)"
+            echo "$CONFIG" > "$CONFIG_FILE"
+            markdownlint '**/*.md' --ignore node_modules -c "$CONFIG_FILE"

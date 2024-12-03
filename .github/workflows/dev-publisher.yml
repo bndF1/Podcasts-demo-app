@@ -1,0 +1,35 @@
+  name: Dev.to Publisher
+
+  on:
+    push:
+      branches:
+        - "**"
+      paths:
+        - "articles/**/*.md"
+
+  jobs:
+    publish:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+
+        - name: Set dry-run mode based on branch
+          id: dry_run_check
+          run: |
+            if [[ "${{ github.ref_name }}" == "main" ]]; then
+              echo "dry_run=false" >> $GITHUB_ENV
+            else
+              echo "dry_run=true" >> $GITHUB_ENV
+            fi
+
+        - name: Publish articles to Dev.to
+          uses: sinedied/publish-devto@v2
+          with:
+            devto_key: ${{ secrets.DEVTO_TOKEN }}
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            files: "articles/**/*.md"
+            branch: ${{ env.CURRENT_BRANCH }}
+            conventional_commits: true
+            dry_run: ${{ env.dry_run }}
