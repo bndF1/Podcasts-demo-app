@@ -30,6 +30,5 @@
             devto_key: ${{ secrets.DEVTO }}
             github_token: ${{ secrets.GITHUB_TOKEN }}
             files: "articles/**/*.md"
-            branch: ${{ env.CURRENT_BRANCH }}
             conventional_commits: true
             dry_run: ${{ env.dry_run }}
