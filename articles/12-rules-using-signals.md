@@ -20,13 +20,13 @@ In the recent talk titled ["3 Rules for Successfully Using Signals in Angular"](
 - They help manage asynchronous operations and state updates.
 - Make reactive flows more manageable and maintainable.
 
-### Additional Hints:
+### Additional Hints
 
 - Signals work well with RxJS for advanced reactive programming.
 - Use RxJS operators like `switchMap` to prevent race conditions.
 - Be aware of the implications when using business effects with signals.
 
-### Business Effects Considerations:
+### Business Effects Considerations
 
 - Effects may miss intermediate values due to the "glitch-free" property of signals.
 - Be cautious of circular dependencies and infinite loops.

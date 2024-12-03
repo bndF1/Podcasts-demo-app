@@ -2,7 +2,7 @@
 
 In the ever-evolving landscape of web development, creating a **scalable** and **maintainable Angular application** is crucial for long-term success. 🏗️ Today, we'll dive into a **case study of an architecture** that promotes these qualities, examining its structure and benefits. We'll explore how this architecture was used to build a music streaming application (simplified for this example) with a growing library of podcasts and user features. 🎧
 
-### Who Is This Article For? 👨‍💻👩‍💻
+## Who Is This Article For? 👨‍💻👩‍💻
 
 This article is designed for **intermediate to advanced Angular developers** who are looking to refine their application architecture for better scalability and maintainability. If you're familiar with the basics of Angular components, services, and state management but want to dive deeper into best practices and architectural patterns, this is for you! 👍
 
@@ -12,7 +12,7 @@ This article is designed for **intermediate to advanced Angular developers** who
 
 A well-organized folder structure is the backbone of a maintainable application. Here’s a **folder structure** that has proven effective:
 
-```
+```typescript
 src/
   app/
     components/
@@ -38,16 +38,11 @@ Each folder serves a distinct purpose, contributing to a **modular and scalable 
 
 In this structure, the **components folder** is further organized by feature:
 
-```
-components/
-  podcasts/
-    podcasts-container.component.ts
-    podcast-item/
-      podcast-item.component.ts
-  episodes/
-    episodes-container.component.ts
-    episode-item/
-      episode-item.component.ts
+```typescript
+components / podcasts / podcasts - container.component.ts;
+podcast - item / podcast - item.component.ts;
+episodes / episodes - container.component.ts;
+episode - item / episode - item.component.ts;
 ```
 
 This setup provides several benefits:
