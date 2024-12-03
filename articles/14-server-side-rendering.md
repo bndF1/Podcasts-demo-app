@@ -21,5 +21,3 @@ Angular uses "hydration" to sync the server-rendered DOM with the client. Additi
 This powerful feature makes it easier than ever to build high-performing, SEO-friendly Angular applications. [Watch Alain's session to dig deeper into SSR!](https://youtu.be/zCinRB33oqI?si=JGmZ6SyjqLUiQq5h)
 
 ---
-
-#Angular #SSR #WebDevelopment #Performance #SEO #Frontend

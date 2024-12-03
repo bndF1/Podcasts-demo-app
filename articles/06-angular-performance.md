@@ -36,7 +36,7 @@ In this example, the `app-podcast-list` component will only be loaded when it en
 
 `On idle` will trigger the deferred loading once the browser has reached an idle state. This is the default behavior with a defer block.
 
-### 🎯 Impact on Core Web Vitals:
+### 🎯 Impact on Core Web Vitals
 
 - **Improves LCP**: Deferring non-critical content allows faster loading of main content. Lazy loading reduces initial bundle size, speeding up load times.
 - **Enhances INP**: By deferring non-essential interactivity, the app remains responsive throughout the user's session. Prefetching during idle time ensures smoother interactions when content is needed.
@@ -58,7 +58,7 @@ const routes: Routes = [
 
 This approach loads the entire `PodcastsComponent` only when the user navigates to the `/podcasts` route.
 
-### 🎯 Impact on Core Web Vitals:
+### 🎯 Core Web Vitals impact
 
 - **Further improves LCP**: Initial bundle size is reduced, leading to faster load times.
 - **Boosts FID**: Less JavaScript to parse on initial load means the app becomes interactive faster.
@@ -196,5 +196,3 @@ By leveraging `@defer` blocks with placeholders, loading states, and prefetching
 The key is to understand your user's journey and prioritize content accordingly. Use `@defer` and lazy loading strategically to create a fast, responsive, and smooth user experience.
 
 Have you implemented `@defer` or lazy loading in your Angular projects? What improvements did you see? Share your experiences in the comments below! 💬
-
-#Angular #WebPerformance #CoreWebVitals #LazyLoading #DeferBlocks
