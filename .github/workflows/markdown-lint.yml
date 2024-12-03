@@ -6,7 +6,7 @@
         - "**"
     pull_request:
       paths:
-        - "**/*.md"
+        - "articles/**/*.md"
 
   jobs:
     markdown-lint:
