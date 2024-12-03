@@ -53,4 +53,4 @@ In the template, we can directly use episodes() to access the latest value, just
 
 #Angular #WebDevelopment #JavaScript #RxJS #FrontendDevelopment
 
-What do you think? Want to dive deeper into Signals and RxJS integration? Let me know in the comments!
+What do you think? Want to dive deeper into Signals and RxJS integration? Let me know in the comments!.
