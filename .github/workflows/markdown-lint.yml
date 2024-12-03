@@ -6,7 +6,7 @@
         - "**"
     pull_request:
       paths:
-        - "articles/**/*.md"
+        - "**/*.md"
 
   jobs:
     markdown-lint:
@@ -39,4 +39,4 @@
           run: |
             CONFIG_FILE="$(mktemp)"
             echo "$CONFIG" > "$CONFIG_FILE"
-            markdownlint '**/*.md' --ignore node_modules -c "$CONFIG_FILE"
+            markdownlint 'articles/**/*.md' --ignore node_modules -c "$CONFIG_FILE"
