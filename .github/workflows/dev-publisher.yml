@@ -27,7 +27,7 @@
           with:
             devto_key: ${{ secrets.DEVTO }}
             github_token: ${{ secrets.GITHUB_TOKEN }}
-            files: "articles/**/*.md"
+            files: 'articles/**/*.md'
             conventional_commits: true
             dry_run: ${{ env.dry_run }}
             log: steps.publish_devto.outputs.result_summary
