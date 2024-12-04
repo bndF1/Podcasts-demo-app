@@ -6,11 +6,9 @@
         - "**"
       paths:
         - "articles/**/*.md"
-
   jobs:
     publish:
       runs-on: ubuntu-latest
-
       steps:
         - name: Checkout code
           uses: actions/checkout@v4
@@ -32,3 +30,4 @@
             files: "articles/**/*.md"
             conventional_commits: true
             dry_run: ${{ env.dry_run }}
+            log: steps.publish_devto.outputs.result_summary
