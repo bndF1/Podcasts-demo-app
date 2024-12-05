@@ -3,7 +3,7 @@ title: New in Angular Bridging RxJS and Signals with `toSignal`! 🚀
 published: false
 description: Angular developers, are you ready to simplify your reactive programming? Let me introduce you to `toSignal`, a game-changing feature that seamlessly connects RxJS Observables with Angular's new Signals API.
 tags: 'Angular, RxJS, Signals, Web Development, Programming'
-cover_image: ./assets/to-signal.jpg
+cover_image: ./assets/to-signal.png
 canonical_url: null
 ---
 
