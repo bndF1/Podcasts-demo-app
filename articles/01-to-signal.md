@@ -58,6 +58,6 @@ We're fetching data from an API, transforming it with EpisodeAdapter, and then w
 In the template, we can directly use episodes() to access the latest value, just like any other Signal!
 ⚠️ Important Note: The RxJS Interop package (`@angular/core/rxjs-interop`) is currently available for developer preview. While it's ready for experimentation, be aware that it might undergo changes before reaching a stable release.
 
-🚀 Ready to level up your Angular skills? Start experimenting with `toSignal` in your projects today!
+🚀 Ready to level up your Angular skills? Start experimenting with `toSignal` in your projects today!!
 
 What do you think? Want to dive deeper into Signals and RxJS integration? Let me know in the comments!.
