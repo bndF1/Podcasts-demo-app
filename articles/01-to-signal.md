@@ -3,11 +3,9 @@ title: New in Angular Bridging RxJS and Signals with `toSignal`! 🚀
 published: false
 description: Angular developers, are you ready to simplify your reactive programming? Let me introduce you to `toSignal`, a game-changing feature that seamlessly connects RxJS Observables with Angular's new Signals API.
 tags: 'Angular, RxJS, Signals, Web Development, Programming'
-cover_image: ./assets/to-signal.jpg
+cover_image: ./assets/to-signal.png
 canonical_url: null
 ---
-
-# [New in Angular: Bridging RxJS and Signals with `toSignal`! 🚀](https://www.linkedin.com/pulse/new-angular-bridging-rxjs-signals-tosignal-jes%C3%BAs-bened%C3%A9-gxsef/?trackingId=6aC5rZqkTD%2B5UP8T%2B0tHeQ%3D%3D)
 
 Angular developers, are you ready to simplify your reactive programming? Let me introduce you to `toSignal`, a game-changing feature that seamlessly connects RxJS Observables with Angular's new Signals API.
 
@@ -58,6 +56,6 @@ We're fetching data from an API, transforming it with EpisodeAdapter, and then w
 In the template, we can directly use episodes() to access the latest value, just like any other Signal!
 ⚠️ Important Note: The RxJS Interop package (`@angular/core/rxjs-interop`) is currently available for developer preview. While it's ready for experimentation, be aware that it might undergo changes before reaching a stable release.
 
-🚀 Ready to level up your Angular skills? Start experimenting with `toSignal` in your projects today!
+🚀 Ready to level up your Angular skills? Start experimenting with `toSignal` in your projects today!!
 
 What do you think? Want to dive deeper into Signals and RxJS integration? Let me know in the comments!.
