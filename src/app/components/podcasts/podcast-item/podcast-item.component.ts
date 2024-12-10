@@ -4,7 +4,6 @@ import { Podcast } from '@models';
 
 @Component({
   selector: 'app-podcast-item',
-  standalone: true,
   imports: [NgOptimizedImage],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `

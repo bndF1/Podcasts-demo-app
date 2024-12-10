@@ -21,7 +21,6 @@ import { map } from 'rxjs';
 
 @Component({
   selector: 'app-navigation',
-  standalone: true,
   imports: [
     CommonModule,
     RouterModule,

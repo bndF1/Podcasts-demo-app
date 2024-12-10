@@ -6,7 +6,6 @@ import { EpisodesItemComponent } from './episodes-item/episodes-item.component';
 
 @Component({
   selector: 'app-episodes-container',
-  standalone: true,
   imports: [CommonModule, EpisodesItemComponent, SkeletonComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `

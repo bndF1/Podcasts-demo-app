@@ -5,7 +5,6 @@ import { PodcastItemComponent } from './podcast-item/podcast-item.component';
 
 @Component({
   selector: 'app-podcasts-container',
-  standalone: true,
   imports: [PodcastItemComponent, SkeletonComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
