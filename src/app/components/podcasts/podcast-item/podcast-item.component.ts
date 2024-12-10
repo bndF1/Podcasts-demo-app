@@ -22,8 +22,10 @@ import { Podcast } from '@models';
 
         <img
           class="object-cover w-full h-48 mt-2"
-          [src]="podcast.image"
+          [ngSrc]="podcast.image"
           [alt]="podcast.title"
+          width="400"
+          height="192"
         />
 
         <div class="flex items-center justify-between px-4 py-2 bg-gray-900">

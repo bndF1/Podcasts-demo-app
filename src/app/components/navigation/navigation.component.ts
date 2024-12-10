@@ -11,23 +11,13 @@ import {
 } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { RouterModule } from '@angular/router';
-import {
-  LoadingComponent,
-  SearchComponent,
-  SkeletonComponent,
-} from '@components/shared';
+import { LoadingComponent, SearchComponent } from '@components/shared';
 import { LoadingService } from '@services';
 import { map } from 'rxjs';
 
 @Component({
   selector: 'app-navigation',
-  imports: [
-    CommonModule,
-    RouterModule,
-    SkeletonComponent,
-    SearchComponent,
-    LoadingComponent,
-  ],
+  imports: [CommonModule, RouterModule, SearchComponent, LoadingComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div #drawer>
@@ -98,7 +88,6 @@ import { map } from 'rxjs';
 
     <div class="flex flex-col p-4 sm:ml-64 gap-4">
       <app-search />
-
       @if (isLoading()) {
         <app-loading />
       }

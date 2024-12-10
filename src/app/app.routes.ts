@@ -15,11 +15,6 @@ const PODCASTS: Route = {
 export const appRoutes: Route[] = [
   {
     path: '',
-    redirectTo: 'main',
-    pathMatch: 'full',
-  },
-  {
-    path: 'main',
     redirectTo: 'main/podcasts',
     pathMatch: 'full',
   },
