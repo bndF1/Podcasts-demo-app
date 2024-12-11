@@ -1,8 +1,5 @@
 ---
 title: 'How Angular Routing Works'
-published: true
-tags: 'Angular, Routing, JavaScript, Web Development'
-description: 'An in-depth look at how routing works in Angular applications, including setup, configuration, and best practices.'
+date: '2024-11-12'
+tags: ['Angular', 'Routing', 'JavaScript', 'Web Development']
 ---
-
-Hi, this a test.
