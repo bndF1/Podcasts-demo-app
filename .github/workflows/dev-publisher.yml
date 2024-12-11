@@ -23,7 +23,7 @@
             fi
 
         - name: Publish articles to Dev.to
-          uses: sinedied/publish-devto@v1
+          uses: sinedied/publish-devto@v2
           with:
             devto_key: ${{ secrets.DEVTO }}
             github_token: ${{ secrets.GITHUB_TOKEN }}
