@@ -2,7 +2,7 @@
 title: 'Modern Testing Practices in Angular: From Unit to Integration Testing'
 published: false
 description: 'Learn about the shift from unit to integration testing in Angular'
-tags: 'angular, unit testing, integration testing, testing'
+tags: 'angular, unit testing, integration testing'
 cover_image: ./assets/ng-testing.png
 ---
 
