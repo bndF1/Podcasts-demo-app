@@ -6,6 +6,9 @@
         - "**"
       paths:
         - "articles/**/*.md"
+  permissions:
+    contents: write
+
   jobs:
     publish:
       runs-on: ubuntu-latest
@@ -32,3 +35,11 @@
             files: "articles/**/*.md"
             conventional_commits: true
             dry_run: ${{ env.dry_run }}
+          env:
+            GIT_COMMITTER_NAME: ${{ github.actor }}
+            GIT_COMMITTER_EMAIL: ${{ github.actor }}@users.noreply.github.com
+
+        - name: Publish result
+          run: |
+            echo "Publishing Result: ${{ steps.publish_articles.outputs.result_json }}"
+          continue-on-error: true
