@@ -3,7 +3,6 @@ title: 'Simplify Angular Reactive Programming with toSignal'
 published: false
 description: 'Unleash the power of toSignal'
 tags: 'Angular, RxJS, Signals, reactive programming, toSignal'
-series: Angular development
 cover_image: ./assets/to-signal.png
 ---
 
