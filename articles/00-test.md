@@ -3,7 +3,7 @@ title: 'Test article'
 published: true
 description: 'Article for testing purposes'
 tags: 'automation, monitoring, resilience, testing'
-series: DEV TESTING
+cover_image: ./assets/ng-testing.png
 ---
 
 Hello this a test article.
