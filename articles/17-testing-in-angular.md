@@ -1,10 +1,11 @@
 ---
 title: 'Modern Testing Practices in Angular: From Unit to Integration Testing'
-published: false
+published: true
 description: Learn about the shift from unit to integration testing in Angular
 tags: 'angular, testing'
 cover_image: ./assets/ng-testing.png
 id: 2159025
+date: '2024-12-16T16:06:09Z'
 ---
 
 In the dynamic world of web development, ensuring the reliability and maintainability of your applications is paramount. 🌐 Angular, one of the leading frontend frameworks, has been at the forefront of this endeavor, evolving its testing strategies to keep pace with industry best practices.
