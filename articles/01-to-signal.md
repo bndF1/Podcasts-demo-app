@@ -1,7 +1,7 @@
 ---
 title: 'Simplify Angular Reactive Programming with toSignal'
 published: false
-description: 'Learn how to simplify your Angular reactive programming by using the toSignal function to connect RxJS Observables with Angular Signals API.'
+description: 'Unleash the power of toSignal'
 tags: 'Angular, RxJS, Signals, reactive programming, toSignal'
 series: Angular development
 cover_image: ./assets/to-signal.png
