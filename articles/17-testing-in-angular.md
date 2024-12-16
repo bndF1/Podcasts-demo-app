@@ -1,3 +1,11 @@
+---
+title: 'Modern Testing Practices in Angular: From Unit to Integration Testing'
+published: false
+description: 'Explore the shift from traditional unit testing to comprehensive integration testing in Angular applications, based on insights from Rainer Hanekamp.'
+tags: 'angular, unit testing, integration testing, testing'
+cover_image: ./assets/ng-testing.png
+---
+
 In the dynamic world of web development, ensuring the reliability and maintainability of your applications is paramount. 🌐 Angular, one of the leading frontend frameworks, has been at the forefront of this endeavor, evolving its testing strategies to keep pace with industry best practices.
 
 In this article, we'll explore the insights shared by Rainer Hanekamp, a trainer and consultant at Angular Architects, who advocates for a significant shift from traditional unit testing to more comprehensive integration testing in Angular applications. 🚀
