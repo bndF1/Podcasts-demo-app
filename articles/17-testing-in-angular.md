@@ -1,7 +1,7 @@
 ---
 title: 'Modern Testing Practices in Angular: From Unit to Integration Testing'
 published: false
-description: 'Explore the shift from traditional unit testing to comprehensive integration testing in Angular applications, based on insights from Rainer Hanekamp.'
+description: 'Learn about the shift from unit to integration testing in Angular'
 tags: 'angular, unit testing, integration testing, testing'
 cover_image: ./assets/ng-testing.png
 ---
