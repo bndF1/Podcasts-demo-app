@@ -1,8 +1,9 @@
 ---
-title: 'How Angular Routing Works'
-date: '2024-11-12'
-tags: 'Angular, Routing, JavaScript, Web Development'
+title: 'Test article'
 published: true
+description: 'Article for testing purposes'
+tags: 'automation, monitoring, resilience, testing'
+series: DEV TESTING
 ---
 
 Hello this a test article.
