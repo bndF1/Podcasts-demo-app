@@ -5,6 +5,7 @@ description: 'Enhance your Angular apps with `toSignal`, a powerful feature that
 tags: 'angular, rxjs, signals'
 cover_image: ./assets/to-signal.png
 id: 2158985
+date: '2024-12-17T11:33:49Z'
 ---
 
 Angular developers, are you ready to simplify your reactive programming? Let me introduce you to `toSignal`, a game-changing feature that seamlessly connects RxJS Observables with Angular's new Signals API.
