@@ -1,6 +1,6 @@
 ---
 title: 'New in Angular: Bridging RxJS and Signals with toSignal!'
-published: false
+published: true
 description: 'Enhance your Angular apps with `toSignal`, a powerful feature that bridges RxJS Observables and Angular Signals!'
 tags: 'angular, rxjs, signals'
 cover_image: ./assets/to-signal.png
