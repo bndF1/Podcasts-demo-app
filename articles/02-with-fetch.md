@@ -1,7 +1,7 @@
 ---
-title: 'Modernizing Angular: Embracing Fetch API for Better Performance and Security"
+title: Modernizing Angular: Embracing Fetch API for Better Performance and Security
 published: true
-description: 'Learn how to switch Angular HttpClient to use the Fetch API for improved performance and security.'
+description: Learn how to switch Angular HttpClient to use the Fetch API for improved performance and security.
 tags: 'angular, performance, fetch'
 cover_image: ./assets/ng-fetch.png
 ---
