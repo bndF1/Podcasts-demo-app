@@ -1,9 +1,11 @@
 ---
 title: 'Modernizing Angular: Embracing Fetch API for Better Performance and Security'
 published: true
-description: 'Learn how to switch Angular HttpClient to use the Fetch API for improved performance and security.'
+description: Learn how to switch Angular HttpClient to use the Fetch API for improved performance and security.
 tags: 'angular, performance, fetch'
 cover_image: ./assets/ng-fetch.png
+id: 2160920
+date: '2024-12-17T11:52:57Z'
 ---
 
 As Angular evolves, it brings exciting changes that streamline our development process and enhance our applications. One such change is the introduction of `app.config.ts`, where we now define providers for bootstrapping our main component. Today, let's highlight a simple yet powerful feature: switching Angular's HttpClient to use the Fetch API.
