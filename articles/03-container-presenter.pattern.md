@@ -1,4 +1,10 @@
-# [Mastering the Container-Presenter Pattern in Angular: A Deep Dive 🚀](https://www.linkedin.com/pulse/mastering-container-presenter-pattern-angular-jes%C3%BAs-bened%C3%A9-3g4wf/)
+---
+title: 'Mastering the Container-Presenter Pattern in Angular: A Deep Dive'
+published: true
+description: 'Explore the Container-Presenter pattern in Angular to enhance component reusability, testability, and maintainability.'
+tags: 'Angular, patterns, container, presenter'
+cover_image: ./assets/container-presenter.png
+---
 
 In the world of Angular development, structuring your components effectively can make a significant difference in the maintainability and scalability of your application. Today, let's explore a powerful pattern that has become a cornerstone in many Angular projects: the Container-Presenter pattern.
 
