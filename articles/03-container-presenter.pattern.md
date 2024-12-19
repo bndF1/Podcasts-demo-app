@@ -4,6 +4,8 @@ published: true
 description: 'Explore the Container-Presenter pattern in Angular to enhance component reusability, testability, and maintainability.'
 tags: 'Angular, patterns, container, presenter'
 cover_image: ./assets/container-presenter.png
+id: 2165377
+date: '2024-12-19T15:03:28Z'
 ---
 
 In the world of Angular development, structuring your components effectively can make a significant difference in the maintainability and scalability of your application. Today, let's explore a powerful pattern that has become a cornerstone in many Angular projects: the Container-Presenter pattern.
