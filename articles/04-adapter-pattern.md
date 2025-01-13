@@ -5,6 +5,7 @@ description: Discover how the Adapter Pattern can streamline data flow in your A
 tags: 'Angular, patterns, adapter, architecture'
 cover_image: ./assets/adapter-pattern.png
 id: 2197479
+date: '2025-01-13T13:57:07Z'
 ---
 
 In modern web development, especially with Angular, we often grapple with data from various sources that don't align perfectly with our application's models. Enter the Adapter pattern - a game-changer for creating robust and maintainable Angular applications. Let's dive in!
