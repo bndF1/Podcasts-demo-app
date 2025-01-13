@@ -1,6 +1,6 @@
 ---
 title: "Streamlining Data Flow in Angular: The Power of the Adapter Pattern \U0001F504"
-published: false
+published: true
 description: Discover how the Adapter Pattern can streamline data flow in your Angular applications.
 tags: 'Angular, patterns, adapter, architecture'
 cover_image: ./assets/adapter-pattern.png
