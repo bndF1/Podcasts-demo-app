@@ -34,7 +34,7 @@ Topics covered include:
 
 ## 🏗️ Architecture and Key Features
 
-### 🅰️ Angular 18.2.0
+### 🅰️ Angular 19.x.x
 
 This project uses the latest stable version of Angular, taking advantage of its newest features and performance improvements.
 
