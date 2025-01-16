@@ -1,6 +1,6 @@
 ---
 title: "Architecting Angular Applications: A Case Study in Scalable and Maintainable Design \U0001F680"
-published: false
+published: true
 description: Explore a case study on architecting Angular applications for scalability and maintainability. Learn best practices and design patterns to build robust and efficient Angular projects.
 tags: 'Angular, patterns, scalable, architecture'
 cover_image: ./assets/adapter-pattern.png
