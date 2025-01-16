@@ -5,6 +5,7 @@ description: Explore a case study on architecting Angular applications for scala
 tags: 'Angular, patterns, scalable, architecture'
 cover_image: ./assets/adapter-pattern.png
 id: 2197480
+date: '2025-01-16T14:42:42Z'
 ---
 
 In the ever-evolving landscape of web development, creating a **scalable** and **maintainable Angular application** is crucial for long-term success. 🏗️ Today, we'll dive into a **case study of an architecture** that promotes these qualities, examining its structure and benefits. We'll explore how this architecture was used to build a music streaming application (simplified for this example) with a growing library of podcasts and user features. 🎧
