@@ -1,5 +1,5 @@
 ---
-title: 'Boosting Angular Performance: @defer, Lazy Loading, and Core Web Vitals'
+title: 'Boosting Angular Performance: `@defer`, Lazy Loading, and Core Web Vitals'
 published: false
 description: Understanding Core Web Vitals
 tags: 'Angular, CoreWebVitals, defer, LazyLoading'
@@ -17,7 +17,7 @@ Before we dive in, let's quickly recap what Core Web Vitals are:
 
 > **Note**: First Input Delay (FID) is no longer a Core Web Vital. It measured initial interactivity, aiming for values less than 100 milliseconds for a good user experience. INP now provides a more comprehensive measure of responsiveness throughout the user's entire session.
 
-## 🧩 The Power of @defer
+## 🧩 The Power of `@defer`
 
 Angular's `@defer` block is a game-changer for performance optimization. It allows you to defer the loading of component trees until they're needed. Here's an example:
 
