@@ -2,7 +2,7 @@
 title: 'Boosting Angular Performance: defer, Lazy Loading, and Core Web Vitals'
 published: false
 description: Understanding Core Web Vitals
-tags: 'Angular, Core Web Vitals, defer, Lazy Loading'
+tags: 'Angular, CoreWebVitals, defer, LazyLoading'
 cover_image: ./assets/core-web-vitals.png
 ---
 
