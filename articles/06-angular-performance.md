@@ -1,5 +1,5 @@
 ---
-title: "\U0001F680 Boosting Angular Performance: @defer, Lazy Loading, and Core Web Vitals"
+title: 'Boosting Angular Performance: @defer, Lazy Loading, and Core Web Vitals'
 published: false
 description: Understanding Core Web Vitals
 tags: 'Angular, CoreWebVitals, defer, LazyLoading'
