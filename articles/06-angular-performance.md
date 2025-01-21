@@ -3,7 +3,7 @@ title: '🚀 Boosting Angular Performance: @defer, Lazy Loading, and Core Web Vi
 published: false
 description: Understanding Core Web Vitals.
 tags: 'Angular, WebVitals, defer'
-cover_image: ./assets/core-web-vitals.png
+cover_image: ./assets/ng-testing.png
 ---
 
 ## 🔍 Understanding Core Web Vitals
