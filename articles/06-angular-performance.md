@@ -5,6 +5,7 @@ description: Understanding Core Web Vitals
 tags: 'Angular, CoreWebVitals, defer, LazyLoading'
 cover_image: ./assets/core-web-vitals.png
 id: 2231125
+date: '2025-02-05T11:55:08Z'
 ---
 
 ## 🔍 Understanding Core Web Vitals
