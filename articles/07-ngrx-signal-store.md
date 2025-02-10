@@ -5,7 +5,7 @@ description: "Discover how to master state management in Angular with NgRx Signa
 tags: 'Angular, NgRx, signals, store'
 cover_image: ./assets/ngrx-store.png
 id: 2231126
-date: '2025-02-09T10:18:12Z'
+date: '2025-02-10T10:18:12Z'
 series: Ngrx Signal Store
 ---
 
