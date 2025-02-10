@@ -6,6 +6,7 @@ import {
   withComputed,
   withHooks,
   withMethods,
+  withProps,
   withState,
 } from '@ngrx/signals';
 import { withEntities } from '@ngrx/signals/entities';
@@ -34,6 +35,9 @@ export const PodcastStore = signalStore(
   { providedIn: 'root' },
   withState(() => inject(STORE_STATE)),
   withEntities<Podcast>(),
+  withProps(() => ({
+    podcastService: inject(PodcastService),
+  })),
   withComputed(({ podcasts, myPodcasts, filter }) => ({
     subscribedPodcasts: computed(() =>
       podcasts().filter((podcast) =>
@@ -45,7 +49,7 @@ export const PodcastStore = signalStore(
       return podcasts().sort((a, b) => (a.rating - b.rating) * direction);
     }),
   })),
-  withMethods((store, podcastService = inject(PodcastService)) => ({
+  withMethods(({ podcastService, ...store }) => ({
     async getAllPodcasts() {
       patchState(store, { loading: true });
       const allPodcasts = await lastValueFrom(podcastService.getAll());
