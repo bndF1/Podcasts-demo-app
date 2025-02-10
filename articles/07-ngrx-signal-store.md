@@ -1,10 +1,11 @@
 ---
 title: "Mastering State Management with NgRx Signal Store in Angular \U0001F680"
 published: true
-description: "Discover how to master state management in Angular with NgRx Signal Store. This article explores the integration of Angular's Signals API with NgRx to create a powerful and efficient state management solution. Learn how to set up NgRx Signal Store, manage centralized state, leverage reactive updates, and utilize computed properties for derived state in your Angular applications."
+description: 'Discover how to master state management in Angular with NgRx Signal Store. This article explores the integration of Angular''s Signals API with NgRx to create a powerful and efficient state management solution. Learn how to set up NgRx Signal Store, manage centralized state, leverage reactive updates, and utilize computed properties for derived state in your Angular applications.'
 tags: 'Angular, NgRx, signals, store'
 cover_image: ./assets/ngrx-store.png
 id: 2231126
+date: '2025-02-10T10:18:12Z'
 ---
 
 In the ever-evolving landscape of Angular development, efficient state management is crucial for building scalable and maintainable applications. Enter NgRx Signal Store, a powerful solution that combines the simplicity of Angular's Signals API with the robustness of NgRx. Let's dive into how you can leverage NgRx Signal Store to streamline your state management in Angular applications.
