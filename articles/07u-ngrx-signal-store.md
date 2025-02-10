@@ -6,6 +6,7 @@ tags: 'Angular, NgRx, signals, store'
 cover_image: ./assets/ngrx-u.png
 id: 2268998
 date: '2025-02-10T10:18:11Z'
+series: 'Ngrx Signal Store'
 ---
 
 With the recent updates to NgRx, several new features have been introduced that enhance the functionality and flexibility of the `SignalStore`. In this update, I will outline the key changes in the new code compared to the original implementation, along with explanations based on the updated NgRx documentation.
