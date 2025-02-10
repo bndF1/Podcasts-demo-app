@@ -5,6 +5,7 @@ description: 'Update: NgRx Signal Store Enhancements. Dive into the latest impro
 tags: 'Angular, NgRx, signals, store'
 cover_image: ./assets/ngrx-u.png
 series: Ngrx Signal Store
+id: 2269113
 ---
 
 With the recent updates to NgRx, several new features have been introduced that enhance the functionality and flexibility of the `SignalStore`. In this update, I will outline the key changes in the new code compared to the original implementation, along with explanations based on the updated NgRx documentation.
