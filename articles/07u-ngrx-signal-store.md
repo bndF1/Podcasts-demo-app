@@ -1,11 +1,9 @@
 ---
 title: "(Update: NgRx Signal Store Enhancements) Mastering State Management with NgRx Signal Store in Angular \U0001F680"
-published: true
+published: false
 description: 'Update: NgRx Signal Store Enhancements. Dive into the latest improvements that merge Angular Signals API with NgRx for streamlined state management. This article details how to set up the updated NgRx Signal Store, leverage reactive updates and computed properties, and implement type-safe state modifications. Discover best practices for centralized state management and learn how these enhancements can optimize efficiency and scalability in your Angular applications.'
 tags: 'Angular, NgRx, signals, store'
 cover_image: ./assets/ngrx-u.png
-id: 2268998
-date: '2025-02-10T10:18:11Z'
 series: Ngrx Signal Store
 ---
 
